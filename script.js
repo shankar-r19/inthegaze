@@ -46,9 +46,17 @@
     r.resizeDrawingSurfaceToCanvas();
   });
 
-  // parallax tilt on the intro canvas
+  // parallax tilt on the intro canvas (throttled)
+  let lastTime = 0;
+  const throttleMs = 16; // ~60fps
+  let pendingTransform = false;
+  
   window.addEventListener("mousemove", (e) => {
     if (document.getElementById("intro").classList.contains("hidden")) return;
+    const now = Date.now();
+    if (now - lastTime < throttleMs) return;
+    lastTime = now;
+    
     const x = e.clientX / window.innerWidth;
     const y = e.clientY / window.innerHeight;
     const rotateY = (x - 0.5) * 20;
@@ -56,10 +64,11 @@
     const moveX = (x - 0.5) * 40;
     const moveY = (y - 0.5) * 40;
     canvas.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateX(${moveX}px) translateY(${moveY}px)`;
-  });
+  }, { passive: true });
+  
   window.addEventListener("mouseleave", () => {
     canvas.style.transform = `rotateX(0deg) rotateY(0deg) translateX(0px) translateY(0px)`;
-  });
+  }, { passive: true });
 })();
 
 /* ===== SITE LOGIC ===== */
