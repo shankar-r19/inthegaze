@@ -46,13 +46,15 @@
     r.resizeDrawingSurfaceToCanvas();
   });
 
-  // parallax tilt on the intro canvas (throttled)
+  // parallax tilt on the intro canvas (throttled) - disabled on mobile
   let lastTime = 0;
   const throttleMs = 16; // ~60fps
-  let pendingTransform = false;
+  const isMobile = window.innerWidth <= 768 || window.matchMedia("(hover:none)").matches;
   
   window.addEventListener("mousemove", (e) => {
     if (document.getElementById("intro").classList.contains("hidden")) return;
+    if (isMobile) return; // Skip parallax on mobile
+    
     const now = Date.now();
     if (now - lastTime < throttleMs) return;
     lastTime = now;
@@ -67,6 +69,7 @@
   }, { passive: true });
   
   window.addEventListener("mouseleave", () => {
+    if (isMobile) return;
     canvas.style.transform = `rotateX(0deg) rotateY(0deg) translateX(0px) translateY(0px)`;
   }, { passive: true });
 })();

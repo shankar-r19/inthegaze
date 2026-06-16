@@ -155,3 +155,105 @@ footer{border-top:1px solid var(--line);padding:40px 0;margin-top:20px}
 .foot .links{display:flex;gap:18px}
 .foot .links button{background:none;border:none;cursor:pointer;color:var(--ink-soft);font:inherit;font-size:14px}
 .foot .links button:hover{color:var(--ink)}
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .wrap{padding:0 16px}
+  
+  /* INTRO */
+  #enter{bottom:12vh}
+  #enter .hint{font-size:11px}
+  #enter button{font-size:14px;padding:12px 28px}
+  
+  /* NAV */
+  .nav{height:56px;flex-wrap:wrap}
+  .brand{font-size:16px;gap:6px}
+  .tabs{gap:4px;justify-content:flex-start;flex:1}
+  .tab{font-size:13px;padding:6px 10px}
+  
+  /* HERO */
+  .hero{padding:60px 0 50px}
+  .hero h1{font-size:clamp(28px,6vw,44px)}
+  .hero p.lead{max-width:100%;font-size:16px;margin:16px auto 24px}
+  .cta{padding:12px 24px;font-size:14px}
+  .cta.ghost{margin-left:0;margin-top:10px;display:block}
+  
+  /* FEATURE GRID */
+  .grid{grid-template-columns:1fr;gap:16px;margin:40px 0}
+  .card{padding:20px 18px}
+  .card .ico{font-size:24px}
+  .card h3{font-size:17px}
+  .card p{font-size:14px}
+  
+  /* CONTENT PANELS */
+  .panel{padding:50px 0}
+  .panel h2{font-size:clamp(24px,4vw,32px)}
+  .panel .sub{font-size:15px;margin-bottom:24px}
+  .panel h3{font-size:17px;margin:24px 0 6px}
+  .panel p,.panel li{font-size:14px}
+  .card-block{padding:20px;margin-bottom:16px}
+  .card-block h3{margin-top:0;font-size:16px}
+  
+  /* CTA BUTTONS */
+  .cta{display:block;width:100%;text-align:center;margin-bottom:10px}
+  .cta:last-of-type{margin-bottom:0}
+  
+  /* FOOTER */
+  footer{padding:30px 0;margin-top:16px}
+  .foot{flex-direction:column;align-items:flex-start;gap:12px}
+  .foot .links{flex-direction:column;gap:10px}
+  .foot .links button{font-size:13px}
+}
+
+@media (max-width: 480px) {
+  .wrap{padding:0 12px}
+  
+  /* INTRO */
+  #enter{bottom:10vh}
+  #enter .hint{font-size:10px;letter-spacing:.16em}
+  #enter button{font-size:13px;padding:11px 24px}
+  
+  /* NAV */
+  .nav{height:48px}
+  .brand{font-size:14px}
+  .brand .dot{width:8px;height:8px}
+  .tabs{gap:2px;font-size:0.85em}
+  .tab{font-size:12px;padding:4px 8px}
+  .tab:hover{background:transparent}
+  .tab.active{background:var(--ink);color:var(--bg)}
+  
+  /* HERO */
+  .hero{padding:50px 0 40px}
+  .hero h1{font-size:clamp(24px,5vw,36px);line-height:1.1}
+  .eyebrow{font-size:11px;margin-bottom:12px}
+  .hero p.lead{font-size:14px;margin:12px auto 20px}
+  .cta{padding:11px 20px;font-size:13px;margin-bottom:8px}
+  
+  /* FEATURE GRID */
+  .grid{margin:30px 0;gap:14px}
+  .card{padding:16px 14px}
+  .card .ico{font-size:22px;margin-bottom:10px}
+  .card h3{font-size:15px;margin-bottom:6px}
+  .card p{font-size:13px}
+  .card:hover{transform:translateY(-2px)}
+  
+  /* CONTENT SECTIONS */
+  .section-band{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .panel{padding:40px 0}
+  .panel h2{font-size:clamp(20px,4vw,28px)}
+  .panel .sub{font-size:14px;margin-bottom:20px}
+  .panel h3{font-size:15px;margin:20px 0 6px}
+  .panel p,.panel li{font-size:13px;margin-bottom:10px}
+  .card-block{padding:16px;margin-bottom:14px}
+  .card-block h3{font-size:14px;margin:0 0 6px}
+  .card-block p{font-size:13px}
+  
+  /* MAIL LINK */
+  .mail{font-size:16px}
+  
+  /* FOOTER */
+  footer{padding:24px 0;margin-top:12px}
+  .foot{gap:10px}
+  .foot small{font-size:12px}
+  .foot .links button{font-size:12px}
+}
