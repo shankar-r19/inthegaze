@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--
+  GAZE — Grow beyond the scroll
+  Copyright (c) 2026 GAZE. All rights reserved.
+
+  This file and its contents are proprietary and confidential.
+  Unauthorized copying, distribution, or modification of this file,
+  via any medium, is strictly prohibited without prior written permission.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GAZE — Grow beyond the scroll</title>
+<meta name="description" content="GAZE turns focus into a game. Beat brain-rot, build streaks, and grow beyond the scroll. Rooted in cognitive science and mindfulness." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== RIVE INTRO ===== -->
+<div id="intro">
+  <canvas id="rive-canvas"></canvas>
+  <div id="enter">
+    <span class="hint">Grow beyond the scroll</span>
+    <button id="enter-btn">Enter GAZE</button>
+  </div>
+</div>
+
+<!-- ===== SITE ===== -->
+<div id="site">
+<header>
+  <div class="wrap nav">
+    <div class="brand" data-tab="home"><span class="dot"></span>GAZE</div>
+    <nav class="tabs">
+      <button class="tab active" data-tab="home">Home</button>
+      <button class="tab" data-tab="features">Features</button>
+      <button class="tab" data-tab="support">Support</button>
+      <button class="tab" data-tab="privacy">Privacy</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <div class="wrap hero">
+    <span class="eyebrow">Grow beyond the scroll</span>
+    <h1>Reclaim your<br><span class="grad">attention.</span></h1>
+    <p class="lead">GAZE turns focus into a game. Beat brain-rot, build streaks, and watch every distraction-free minute grow into something beautiful.</p>
+    <a class="cta" href="#" id="appstore-btn">Download on the App Store</a>
+    <button class="cta ghost tab" data-tab="features">See how it works</button>
+  </div>
+
+  <div class="section-band">
+    <div class="wrap">
+      <div class="grid">
+        <div class="card"><div class="ico">🔥</div><h3>Gamified Focus</h3><p>Start a session and stay locked in. Finish to keep your streak alive and your progress growing.</p></div>
+        <div class="card"><div class="ico">🚇</div><h3>Visual Journeys</h3><p>Completed sessions build out metro paths, constellations and evolving artwork. Your focus literally builds something.</p></div>
+        <div class="card"><div class="ico">📵</div><h3>Distraction Awareness</h3><p>GAZE notices when you reach for your phone mid-session and gently pulls you back on track.</p></div>
+        <div class="card"><div class="ico">📈</div><h3>Streaks &amp; Progress</h3><p>Track completed sessions over time and keep momentum going, day after day.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grow-section" id="grow-section">
+    <svg class="vine-bg" id="vineSvg" preserveAspectRatio="xMidYMid slice"></svg>
+    <div class="wrap panel" style="text-align:center;position:relative;z-index:2">
+      <h2>Grow beyond your scroll</h2>
+      <p class="sub">Deeply rooted in cognitive science and mindfulness research, GAZE is built to revitalise your focus and help you grow beyond the endless scroll.</p>
+      <a class="cta" href="#">Download on the App Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="wrap panel">
+    <h2>What makes GAZE different</h2>
+    <p class="sub">A calm space built to help you concentrate, study and beat brain-rot — no feeds, no manipulation.</p>
+
+    <div class="card-block"><h3>🔥 Focus Mode</h3><p>A clean, full-screen timer that removes temptation. Set your intention, go heads-down, and stay there until the timer completes.</p></div>
+    <div class="card-block"><h3>🚇 Earn Your Path</h3><p>Every completed session adds to a living visual journey — a growing metro map, a constellation, a path through the library. Progress you can see makes focus stick.</p></div>
+    <div class="card-block"><h3>🫧 Bubble-Popping Journey</h3><p>A playful, satisfying way to wind down and reward yourself after focused work.</p></div>
+    <div class="card-block"><h3>📵 Phone-Pickup Detection</h3><p>GAZE keeps the screen awake during sessions and notices when you reach for distraction, nudging you back to focus.</p></div>
+    <div class="card-block"><h3>🧘 Mindful by Design</h3><p>No endless feeds, no manipulative notifications. Just a calm, intentional environment for deep work and study.</p></div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section id="support">
+  <div class="wrap panel">
+    <h2>Support</h2>
+    <p class="sub">Need help with GAZE? We're happy to assist.</p>
+
+    <div class="card-block">
+      <h3>Contact us</h3>
+      <p>Email us and we'll typically respond within 1–2 business days.</p>
+      <a class="mail" href="mailto:hello@inthegaze.com">hello@inthegaze.com</a>
+    </div>
+
+    <h3>Frequently asked questions</h3>
+
+    <div class="card-block">
+      <h3>How do I start a focus session?</h3>
+      <p>Open the app and tap the focus button on the home screen. Choose your duration and begin.</p>
+    </div>
+    <div class="card-block">
+      <h3>What happens if I leave the app during a session?</h3>
+      <p>GAZE detects when you pick up your phone or switch away and prompts you to return so your session counts.</p>
+    </div>
+    <div class="card-block">
+      <h3>Does the app keep my screen on?</h3>
+      <p>Yes — during an active session the screen stays awake so your timer and progress stay visible.</p>
+    </div>
+    <div class="card-block">
+      <h3>Do I need an account?</h3>
+      <p>No. Your progress is saved on your device as a guest by default.</p>
+    </div>
+    <div class="card-block">
+      <h3>Is my data shared with anyone?</h3>
+      <p>No. See our <button class="tab" data-tab="privacy" style="background:none;border:none;cursor:pointer;font:inherit;color:var(--accent-deep);font-weight:600;padding:0">Privacy Policy</button> for details.</p>
+    </div>
+    <div class="card-block">
+      <h3>I found a bug or have a feature request.</h3>
+      <p>Email us at <a class="inline" href="mailto:hello@inthegaze.com">hello@inthegaze.com</a> — we read every message.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section id="privacy">
+  <div class="wrap panel">
+    <h2>Privacy Policy</h2>
+    <p class="sub">Last updated: June 16, 2026</p>
+
+    <p>GAZE ("we", "us") operates the GAZE mobile application (the "App"). This policy explains how we handle your information.</p>
+
+    <h3>Information we collect</h3>
+    <p>GAZE is designed to work without collecting personal data. Your focus sessions, streaks and progress are stored <strong>locally on your device</strong> and are not transmitted to us or any third party.</p>
+    <p>We do <strong>not</strong> collect, store or sell:</p>
+    <ul>
+      <li>Names, email addresses or contact information</li>
+      <li>Location data</li>
+      <li>Usage analytics that identify you personally</li>
+    </ul>
+
+    <h3>Device permissions</h3>
+    <p>The App may request permission to:</p>
+    <ul>
+      <li><strong>Keep the screen awake</strong> during focus sessions</li>
+      <li><strong>Send notifications</strong> to alert you when a session ends or warn you about distractions</li>
+    </ul>
+    <p>These permissions are used solely to deliver the App's core features.</p>
+
+    <h3>Third-party services</h3>
+    <p>The App does not integrate third-party advertising or tracking SDKs. If this changes in the future, this policy will be updated accordingly.</p>
+
+    <h3>Children's privacy</h3>
+    <p>The App does not knowingly collect personal information from children under 13.</p>
+
+    <h3>Changes to this policy</h3>
+    <p>We may update this policy from time to time. Updates will be posted on this page with a revised "Last updated" date.</p>
+
+    <h3>Contact</h3>
+    <p>Questions about this policy? Email us at <a class="inline" href="mailto:hello@inthegaze.com">hello@inthegaze.com</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <small>© 2026 GAZE. All rights reserved.</small>
+    <div class="links">
+      <button data-tab="home">Home</button>
+      <button data-tab="features">Features</button>
+      <button data-tab="support">Support</button>
+      <button data-tab="privacy">Privacy</button>
+    </div>
+  </div>
+</footer>
+</div><!-- /#site -->
+
+<!-- ===== RIVE RUNTIME ===== -->
+<script src="https://unpkg.com/@rive-app/webgl2@2.36.0"></script>
+<script src="assets/intro_riv.js"></script>
+
+<!-- ===== SITE SCRIPTS ===== -->
+<script src="script.js"></script>
+
+</body>
+</html>
